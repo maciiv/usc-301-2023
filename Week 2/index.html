@@ -1,0 +1,273 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex my-5">
+                <h2 class="mx-auto">Calculator</h2>
+            </div>
+            <div class="col-lg-4 col-md-12 my-3">
+                <div id="square" class="card h-100">
+                    <div class="card-header">
+                        <h3>Square</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="calculator-explanation">
+                            <p>The area of a square is the product of the length of its sides</p>
+                            <div class="alert alert-info">
+                                <span><strong>Formula: </strong></span><span>A = a * a</span>
+                                <ul>
+                                    <li>a = side</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="calculator">
+                            <div class="input-group inputs">
+                                <span class="input-group-text">Value: </span>
+                                <input type="text" class="form-control" placeholder="Side">
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="input-group mt-5 pt-3 border-top result">
+                                <span class="input-group-text">Result: </span>
+                                <input type="text" class="form-control" disabled>
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="form-check form-switch mt-2">
+                                <input class="form-check-input record-history" type="checkbox" id="record-square-history">
+                                <label class="form-check-label" for="record-square-history">Record history</label>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <div class="col-lg-6 col-md-6 col-sm-12 d-flex">
+                                    <button class="btn btn-primary w-75 mx-auto calculate">Calculate</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 d-flex">
+                                    <button class="btn btn-secondary w-75 mx-auto reset">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-warning w-100 mx-auto mt-5 mb-3 show-history">Show history</a>
+                        <div class="collapse history" id="square-history">
+                            <div class="card card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Inputs</th>
+                                            <th>Results</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <button class="btn btn-danger w-100 mx-auto mt-3 clear-history">Clear history</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 my-3">
+                <div id="triangle" class="card h-100">
+                    <div class="card-header">
+                        <h3>Triangle</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="calculator-explanation">
+                            <p>A triangle is one of the most basic shapes in geometry</p>
+                            <div class="alert alert-info">
+                                <span><strong>Formula: </strong></span><span>A = b * h * 0.5</span>
+                                <ul>
+                                    <li>b = base</li>
+                                    <li>h = height</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="calculator">
+                            <div class="input-group inputs">
+                                <span class="input-group-text">Value: </span>
+                                <input type="text" class="form-control" placeholder="Base">
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="input-group inputs">
+                                <span class="input-group-text">Value: </span>
+                                <input type="text" class="form-control" placeholder="Height">
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="input-group mt-5 pt-3 border-top result">
+                                <span class="input-group-text">Result: </span>
+                                <input type="text" class="form-control" disabled>
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="form-check form-switch mt-2">
+                                <input class="form-check-input record-history" type="checkbox" id="triangle-history">
+                                <label class="form-check-label" for="triangle-history">Record history</label>
+                            </div>
+                            <div class="calculator-buttons d-flex mt-3">
+                                <div class="col-lg-6 col-md-6 col-sm-12 d-flex">
+                                    <button class="btn btn-primary w-75 mx-auto calculate">Calculate</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 d-flex">
+                                    <button class="btn btn-secondary w-75 mx-auto reset">Reset</button>
+                                </div>
+                            </div>
+                            <a class="btn btn-warning w-100 mx-auto mt-5 mb-3 show-history">Show history</a>
+                            <div class="collapse history" id="triangle-history">
+                                <div class="card card-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Inputs</th>
+                                                <th>Results</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <button class="btn btn-danger w-100 mx-auto mt-3 clear-history">Clear history</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 my-3">
+                <div id="trapezoid" class="card h-100">
+                    <div class="card-header">
+                        <h3>Trapezoid</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="calculator-explanation">
+                            <p>A trapezoid is a 4-sided geometrical shape with two sides parallel to each other</p>
+                            <div class="alert alert-info">
+                                <span><strong>Formula: </strong></span><span>A = (a + b) * h * 0.5</span>
+                                <ul>
+                                    <li>a = short base</li>
+                                    <li>b = long base</li>
+                                    <li>h = height</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="calculator">
+                            <div class="input-group inputs">
+                                <span class="input-group-text">Value: </span>
+                                <input type="text" class="form-control" placeholder="Shorter base">
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="input-group inputs">
+                                <span class="input-group-text">Value: </span>
+                                <input type="text" class="form-control" placeholder="Longer base">
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="input-group inputs">
+                                <span class="input-group-text">Value: </span>
+                                <input type="text" class="form-control" placeholder="Height">
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="input-group mt-5 pt-3 border-top result">
+                                <span class="input-group-text">Result: </span>
+                                <input type="text" class="form-control" disabled>
+                                <select class="form-select">
+                                    <option selected>Select a unit</option>
+                                    <option value="mm">mm</option>
+                                    <option value="cm">cm</option>
+                                    <option value="m">m</option>
+                                </select>
+                            </div>
+                            <div class="form-check form-switch mt-2">
+                                <input class="form-check-input record-history" type="checkbox" id="trapezoid-history">
+                                <label class="form-check-label" for="trapezoid-history">Record history</label>
+                            </div>
+                            <div class="calculator-buttons d-flex mt-3">
+                                <div class="col-lg-6 col-md-6 col-sm-12 d-flex">
+                                    <button class="btn btn-primary w-75 mx-auto calculate">Calculate</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 d-flex">
+                                    <button class="btn btn-secondary w-75 mx-auto reset">Reset</button>
+                                </div>
+                            </div>
+                            <a class="btn btn-warning w-100 mx-auto mt-5 mb-3 show-history">Show history</a>
+                            <div class="collapse history" id="trapezoid-history">
+                                <div class="card card-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Inputs</th>
+                                                <th>Results</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <button class="btn btn-danger w-100 mx-auto mt-3 clear-history">Clear history</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
